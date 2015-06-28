@@ -1,0 +1,70 @@
+
+  <!-- <h1>hCard Builder</h1> -->
+  <!-- <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    Always a pleasure scaffolding your apps.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p> -->
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <h2 class="text-left">PERSONAL DETAILS</h2>
+        <table>
+            <tr>
+              <th>Given Name</th><th>Surname</th>
+            </tr>
+            <tr>
+              <td><input type="text" class="form-control" id="givenname" placeholder="Given Name" ng-model="main.givenname"></td>
+              <td><input type="text" class="form-control" id="surname" placeholder="Surname" ng-model="main.surname"></td>
+            </tr>
+            <tr>
+              <th>Email</th><th>Phone No.</th>
+            </tr>
+            <tr>
+              <td><input type="email" class="form-control" id="email" placeholder="Email" ng-model="main.email"></td>
+              <td><input type="phone" class="form-control" id="phone" placeholder="Phone No." ng-model="main.phone"></td>
+            </tr>
+        </table>
+            <h2 class="text-left">ADDRESS</h2>
+        <table>    
+            <tr>
+              <th>House Name or #</th><th>Street</th>
+            </tr>
+            <tr>
+              <td><input type="text" class="form-control" id="house" placeholder="House Name or #" ng-model="main.house"></td>
+              <td><input type="text" class="form-control" id="street" placeholder="Street Name" ng-model="main.street"></td>
+            </tr>
+            <tr>
+              <th>Suburb</th><th>State</th>
+            </tr>
+            <tr>
+              <td><input type="text" class="form-control" id="street" placeholder="Suburb Name" ng-model="main.suburb"></td>
+              <td><input type="text" class="form-control" id="state" placeholder="State Name" ng-model="main.state"></td>
+            </tr>
+            <tr>
+              <th>Post Code</th><th>Country</th>
+            </tr>
+            <tr>
+              <td><input type="text" class="form-control" id="postcode" placeholder="Postcode" ng-model="main.postcode"></td>
+              <td><input type="text" class="form-control" id="country" placeholder="Country" ng-model="main.country"></td>
+            </tr>
+        </table>
+        <button type="submit" class="btn btn-default">Create hCard</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+    <div class="vcard">
+      <h3><span class="fn">{{main.givenname}} {{main.surname}}</span></h3>
+      <a class="email" href="mailto:{{main.email}}">{{main.email}}</a>
+      <div class="tel">{{main.phone}}</div>
+      <div class="adr">
+        <div class="street-address">{{main.house}} {{main.street}}</div>
+        <span class="locality">{{main.suburb}}</span>
+        <abbr class="region" title="{{main.state}}">{{main.state}}</abbr>
+        <span class="postal-code">{{main.postcode}}</span>
+        <div class="country-name">{{main.country}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+  
